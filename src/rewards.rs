@@ -1,11 +1,11 @@
 // src/rewards.rs
 
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
-use near_sdk::{near_bindgen, AccountId, Balance, PanicOnDefault};
+use near_sdk::{near_bindgen, AccountId, Balance};
 use near_sdk::collections::LookupMap;
 
 #[near_bindgen]
-#[derive(BorshDeserialize, BorshSerialize, PanicOnDefault)]
+#[derive(BorshDeserialize, BorshSerialize)]
 pub struct Rewards {
     rewards: LookupMap<AccountId, Balance>,
 }
